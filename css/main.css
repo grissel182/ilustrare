@@ -188,6 +188,19 @@ header{
   .navbar-fixed-top .navbar-brand {
     padding: 15px 0; } }
 @media (max-width: 600px) {
+  .esconder{
+    display: none;
+  }
+  .navbar-nav li {
+    display: block !important;
+  }
+  .navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color:#1e2841;
+}
   .navbar-fixed-top .navbar-brand {
     padding: 15px 0; }
 
@@ -195,7 +208,9 @@ header{
     padding: 5px 0; }
 
   .navbar-toggle {
-    margin-top: 22px; }
+    margin-top: 22px;
+    border: #1e2841 solid;
+  }
 
   /*menu///*/
   body h1 {
