@@ -1,0 +1,508 @@
+/*colores*/
+$green: #27AD60;
+$blue: #334556;
+$white: white;
+$gris: #C6C4C4;
+$orange: #D7853D;
+/*porcentajes*/
+$cien: 100%;
+$diez: 10%;
+$cinco: 5%;
+$cuarenta: 40%;
+/*pixeles*/
+$quincep: 15px;
+body{
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+}
+section{
+    text-align: center;
+}
+/*MENU*/
+.navbar-fixed-top{
+	.nav {
+    	padding: $quincep 0;
+	}
+	.navbar-brand {
+    	padding: 0 $quincep;
+    	&:hover, &:focus{
+    		background-color: transparent;
+    	}
+    }
+} 
+.navbar-inverse {
+    background-color: $green !important;
+    border: none !important;
+    .navbar-nav li >a {
+    	&:hover, &:focus{
+	    background-color: $blue;
+        }   
+	}
+}
+/*SECCIONES///Y MIXINS/////*/
+@mixin titulo ($titu){ /*titulares*/
+    font: {
+        family:'Roboto';
+        size:4em;
+        weight:500;
+    }
+    text-align: center;
+    color:($titu);
+    margin: $cinco $diez;
+}
+@mixin line($bg-line){ /*lineas debajo titulares*/
+    margin:-2em $cuarenta 3em;
+    background-color: ($bg-line);
+    height:2px;
+}
+@mixin paleta($palette){
+    width:$cien;
+    height: 10em;
+    background-color: ($palette)
+}
+@mixin tabla($borde, $titulo, $even){
+    table{
+        margin-top: $cinco;
+        margin-bottom: $diez;
+        border: 1px solid ($borde);
+        width: $cien;
+        th, td, th{
+            text-align: center;
+            padding: 8px;
+        }
+        th {
+            background-color: ($titulo);
+            font-size: 1.5em;
+            font-weight: 100;
+        }
+        tr:nth-child(odd){
+            background-color: ($even);
+            color: $white;
+        }
+        tr{
+            color: black;
+            background-color: white;
+        }
+        .verde{
+            background-color: $green !important;
+            color: $white;
+            span{
+                font-size: 3em;
+            }
+            p{
+                font-size: 10px;
+            }
+        }
+        .boton{
+            padding: $cinco;
+            background-color: transparent !important;
+        }
+    }
+}
+.p-10{
+        padding: $cinco 0;
+}
+.top{
+    position: fixed;
+    bottom: 25px;
+    right: 50px;
+}
+#slide1{
+    background-image: url(../img/carousel-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-top: -20px;
+    padding-bottom: $quincep;
+    p{
+        color: $white;
+        font-size: 2em;
+        font-weight: 300;
+    }
+    h1{
+        @include titulo(white)
+    }
+}
+#palette{
+    h1{
+        @include titulo(black)
+    }
+    hr{
+        @include line(black)
+    }
+    .sinpadding [class*="col-"] {
+        padding: 5px 0;
+    }
+    .color1{
+        @include paleta(#69D2E7)
+    }
+    .color2{
+        @include paleta(#A7DBDB)
+    }
+    .color3{
+        @include paleta(#E0E4CC)
+    }
+    .color4{
+        @include paleta(#F38630)
+    }
+    .color5{
+        @include paleta(#FA6900)
+    }
+    .color6{
+        @include paleta(#E94C6F)
+    }
+    .color7{
+        @include paleta(#542733);
+        color: $white !important;
+    }
+    .color8{
+        @include paleta(#5A6A62)
+    }
+    .color9{
+        @include paleta(#C6D5CD)
+    }
+    .color10{
+        @include paleta(#FDF200)
+    }
+    .color11{
+        @include paleta(#DB3340)
+    }
+    .color12{
+        @include paleta(#E8B71A)
+    }
+    .color13{
+        @include paleta(#F7EAC8)
+    }
+    .color14{
+        @include paleta(#1FDA9A)
+    }
+    .color15{
+        @include paleta(#28ABE3)
+    }
+    .color16{
+        @include paleta(#588C73)
+    }
+    .color17{
+        @include paleta(#F2E394)
+    }
+    .color18{
+        @include paleta(#F2AE72)
+    }
+    .color19{
+        @include paleta(#D96459)
+    }
+    .color20{
+        @include paleta(#8C4646)
+    }
+    .color21{
+        @include paleta(#D0C91F)
+    }
+    .color22{
+        @include paleta(#85C4B9)
+    }
+    .color23{
+        @include paleta(#008BBA)
+    }
+    .color24{
+        @include paleta(#DF514C)
+    }
+    .color25{
+        @include paleta(#DC403B)
+    }
+}
+#about{
+    background-color: $blue;
+    box-shadow:  0px -4px 9px -2px rgba(115,113,115,1);
+    color: $white;
+    text-align: left !important;
+    img{
+        width: $cien;
+    }
+    h1{
+        @include titulo(white)
+    }
+    hr{
+        @include line(gray)
+    }
+    & p{
+        font-size: 1.2em;
+    }
+    .barras{
+        margin: $diez 0;
+        p{
+            font-size: .9em;
+            margin-top: -1em;
+        }
+        .progress{
+            border-radius: 0 !important;
+            border: 2px solid white;
+            height: $quincep !important;
+            .progress-bar{
+                background-color: #F09B36 !important;
+            }
+        }
+    }
+}
+#wedo{
+    background-color: $green;
+    color: $white;
+    h1{
+        @include titulo(white)
+    }
+    hr{
+        @include line(white)
+    }
+    .p-icon{
+            padding: $cinco;
+            margin-top: $cinco;
+            &:hover{
+                background-color:#2A7257;
+                h2{
+                    border-bottom: 1px solid white;
+                    border:100%;
+                    padding-bottom: $cinco;
+                    color: $orange;
+                    margin-top: $diez;
+                }
+                .fond{
+                    background-color:$orange;
+                    transform:  rotate(45deg);
+                    background-image: none;
+                    margin-bottom: $cinco;
+                }
+            }
+    }
+    .icons1{
+        .fond{
+            width: 70%;
+            background-color: #F87F73;
+            background-image: linear-gradient( -90deg, #334556 0%, #334556 50%, #516C86 50%, #516C86 50%);
+            padding: $diez $cinco;
+            margin-left: 15%;
+        }
+        p{
+            color:$gris;
+            margin-top: $diez;
+        }
+    }
+}
+#team{
+    background-color: $green;
+    color: $white;
+    h1{
+        @include titulo(white)
+    }
+    hr{
+        @include line(white)
+    }
+    .ceo{
+        color: black !important;
+        padding-bottom: $cinco;
+        border-bottom: 1px dashed  $orange;        
+    }
+    .txt{
+        color: $gris;
+        a{
+            color: $gris;
+        }
+            i{
+                padding-top: $quincep;
+            }
+    }
+    .jane{
+        padding: $cinco 0 $diez;
+    }
+}
+#price{
+    padding-bottom: $cinco;
+    background-color: $blue;
+    color: $white;
+    h1{
+        @include titulo(white)
+    }
+    hr{
+        @include line(white)
+    }
+    .titus{
+        padding-bottom: $cinco;
+    }
+    .table-1{
+        @include tabla($green, $orange, $orange);
+        &:hover{
+            margin-top:-$cinco;
+            @include tabla($orange, $blue, $blue)
+        }
+    }
+    .table-2{
+        @include tabla($green, $blue, $blue);
+        &:hover{
+            margin-top:-$cinco;
+            @include tabla($orange, $orange, $orange);
+        }
+    }
+}
+#client{
+    padding-bottom: $cinco;
+    background-color: $blue;
+    color: $white;
+    h1{
+        @include titulo(white)
+    }
+    hr{
+        @include line(white)
+    }
+    i{
+        font-weight: 100;
+        font-size: 1.2em;
+    }
+    .mb-cli{
+        margin-bottom: $cinco;
+    }
+    .company{
+        color: $orange;
+        margin-bottom: 7%;
+    }
+}
+#contact{
+    padding-bottom: $cinco;
+    background-color: $blue;
+    color: $white;
+    h1{
+        @include titulo(white)
+    }
+    hr{
+        @include line(white)
+    }
+    input, textarea{
+        padding: 6px;
+        color: #CAC7C7;
+        margin: $quincep 5px;
+    }
+    form{
+        margin-top: $cinco;
+    }
+    .left{
+        text-align: left;
+    }
+}
+#redes{
+    background-image: url(../img/img-divider-img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: $cien;
+    height: 35em;
+    padding-top: 10em;
+    .trigo{
+        background-image: url(../img/img-divider-img.jpg);
+        background-size: cover;
+        background-position: top;
+        width: $cien;
+        height: 25em;
+        i{
+            margin: $diez $quincep;
+        }
+    }
+}
+footer{
+    background-color: $green;
+    color: $white;
+    h4{
+        font-weight: 400;
+    }
+    .linea{
+        margin: 0 30% $diez;
+    }
+    .linea-2{
+        margin: 0 40% $cinco;
+    }
+    i, span{
+        font-weight: 400;
+        line-height: 2;
+    }
+    .input-group-addon{
+        color: $orange!important;
+    }
+    li, ul, p{
+        display: inline-block;
+    }
+    .dark{
+        color: $blue;
+    }
+}
+/*/////////////////MEDIA QUERIES///////////////////////*/
+@media(min-width:768px) {
+    body {
+        padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: $quincep 0;
+    }
+}
+@media(max-width:600px) {
+	.navbar-fixed-top .navbar-brand {
+        padding: $quincep 0;
+    }
+    .navbar-inverse{
+    	padding: 5px 0;
+    }
+    .navbar-toggle{
+    	margin-top: 22px;
+    }/*menu///*/
+    body{
+        h1{
+            font-size: 2em !important;
+        }
+        hr{
+            margin-top: 1em !important;
+        }
+    } 
+    #slide1{
+        margin-top: $cinco;
+        p{
+            font-size: 1em;
+        }
+    }
+    #palette{
+        .sinpadding [class*="col-"] {
+            padding: 5px;
+        }
+    }
+    #about{
+        .p-10{
+            padding: $cinco;
+        }
+    }
+    #wedo{
+        .p-icon{
+            padding: $diez $cinco $cinco;
+            &:hover{
+                h2{
+                    margin-top: $diez;
+                    padding-top: $cinco;
+                }
+                .fond{
+                    width: 50%;
+                    margin-left: 25%;
+                }
+            }
+        }
+    }
+    #team{
+        .txt{
+            i{
+                margin-bottom: $quincep;
+            }
+        }
+    }
+    #redes{
+        .peque{
+            font-size: 4em;
+        }
+    }
+    .top{
+        position: fixed;
+        bottom: 25px;
+        right: 30px;
+}
+}

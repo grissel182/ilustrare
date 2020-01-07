@@ -1,0 +1,237 @@
+/*colores*/
+/*porcentajes*/
+/*pixeles*/
+body {
+  padding-top: 70px;
+  /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */ 
+  font-family: 'century gothic', sans-serif !important;
+}h3,h4{
+  font-family: 'century gothic', sans-serif !important;
+}
+section {
+  text-align: center; }
+.margen-titulo{
+  margin: 80px auto 70px;
+}
+.jane{
+  margin: 0px auto 80px auto;
+}
+.nopadding{
+  padding: 0;
+}
+.boton-ver{
+  background-color: #de6461;
+  color: #ffffff;
+  font-size: 14px;
+  border: none;
+  padding: 6px 45px;
+  margin: 10px auto;
+
+}
+.foot{
+  font-size: 24px;
+  margin: 80px auto;
+}
+.footerimage{
+  width: 100%;
+}
+.imagencien{
+  width: 100%;
+}
+.sub{
+  font-size: 18px;
+}
+.iconos{
+  width: 40px;
+  margin: 15px;
+}
+.bloquetxt{
+  padding: 100px;
+}
+.bloque{
+  width: 25%;
+  text-align: center;
+  margin: auto;
+}
+.bloque2{
+  width: 40%;
+  text-align: center;
+  margin: auto;
+}
+.bloque3{
+  width: 40%;
+  text-align: left;
+  margin: auto;
+}
+.logo{
+  width: 100px;
+}
+.padding-l{
+  padding: 2px 45px;
+}
+.padding-left{
+
+  text-align: left;
+}
+.enviar{
+  background-color: #de6461;
+    color: #ffffff;
+    padding: 10px;
+    margin-left: -5px;
+}
+.bg-rosa{
+  background-color: #de6461;
+  color: #ffffff;
+}
+.texto-contacto{
+  max-width: 350px;
+  text-align: center;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.price{
+  margin:25px auto;
+  font-size: 16px;
+  font-weight: 600;
+}
+.playeras{
+  width: 255px;
+}
+.playeras2{
+  width: 100%;
+  padding: 25px;
+}
+.pd-left{
+  padding-left: 25px;
+}
+.navbar-nav{
+  text-align: center !important;
+  float: none;
+}
+header{
+  font-size: 20px;
+}
+/*MENU*/
+.navbar-fixed-top .nav {
+  padding: 15px 0; }
+.navbar-nav a{
+  color:black !important;
+}
+.navbar-fixed-top {
+  background-color: #ffffff;
+ }
+.navbar-fixed-top .navbar-brand:hover, .navbar-fixed-top .navbar-brand:focus {
+  background-color: transparent; }
+  .nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #ffffff;
+}
+.navbar-inverse {
+  background-color: rgb(252, 252, 252) !important;
+  border: none !important; }
+  .navbar-inverse .navbar-nav li > a:hover, .navbar-inverse .navbar-nav li > a:focus {
+    background-color: none; }
+.navbar-nav li{
+  position: relative !important;
+  display: inline-block !important;
+  float: unset !important;
+}
+/*SECCIONES///Y MIXINS/////*/
+.p-10 {
+  padding: 5% 0; }
+
+.top {
+  position: fixed;
+  bottom: 25px;
+  right: 50px; }
+
+
+
+#team {
+  background-color: #27AD60;
+  color: white; }
+  #team h1 {
+    /*titulares*/
+    font-family: 'Roboto';
+    font-size: 4em;
+    font-weight: 500;
+    text-align: center;
+    color: white;
+    margin: 5% 10%; }
+  #team hr {
+    /*lineas debajo titulares*/
+    margin: -2em 40% 3em;
+    background-color: white;
+    height: 2px; }
+  #team .ceo {
+    color: black !important;
+    padding-bottom: 5%;
+    border-bottom: 1px dashed #D7853D; }
+  #team .txt {
+    color: #C6C4C4; }
+    #team .txt a {
+      color: #C6C4C4; }
+    #team .txt i {
+      padding-top: 15px; }
+  #team .jane {
+    padding: 5% 0 10%; }
+
+
+
+/*/////////////////MEDIA QUERIES///////////////////////*/
+@media (min-width: 768px) {
+  body {
+    padding-top: 100px;
+    /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */ }
+
+  .navbar-fixed-top .navbar-brand {
+    padding: 15px 0; } }
+@media (max-width: 600px) {
+  .navbar-fixed-top .navbar-brand {
+    padding: 15px 0; }
+
+  .navbar-inverse {
+    padding: 5px 0; }
+
+  .navbar-toggle {
+    margin-top: 22px; }
+
+  /*menu///*/
+  body h1 {
+    font-size: 2em !important; }
+  body hr {
+    margin-top: 1em !important; }
+
+  #slide1 {
+    margin-top: 5%; }
+    #slide1 p {
+      font-size: 1em; }
+
+  #palette .sinpadding [class*="col-"] {
+    padding: 5px; }
+
+  #about .p-10 {
+    padding: 5%; }
+
+  #wedo .p-icon {
+    padding: 10% 5% 5%; }
+    #wedo .p-icon:hover h2 {
+      margin-top: 10%;
+      padding-top: 5%; }
+    #wedo .p-icon:hover .fond {
+      width: 50%;
+      margin-left: 25%; }
+
+  #team .txt i {
+    margin-bottom: 15px; }
+
+  #redes .peque {
+    font-size: 4em; }
+
+  .top {
+    position: fixed;
+    bottom: 25px;
+    right: 30px; } }
+
+/*# sourceMappingURL=main.css.map */
